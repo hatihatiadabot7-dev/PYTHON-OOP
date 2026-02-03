@@ -12,11 +12,11 @@ class Hero:
     def is_alive(self):
         return self.hp > 0
     
-    def take_damage(self, enemy):
+    def attack(self, enemy):
         print(f"{self.name} Menyerang {enemy.name}")
         
 
-    def attack(self, ludah):
+    def take_damage(self, ludah):
         self.hp -= ludah
         print(f"{self.name} terkena ludah sebanyak {ludah} kali!!")
         if self.hp <= 0:
@@ -78,14 +78,14 @@ print(yinlong)
 
 print("=======================================")
 print("--- BATTLE START ---")
-sopo.take_damage(goblin)
-goblin.attack(5)
-dontol.take_damage(goblin)
-goblin.attack(5)
-adit.take_damage(goblin)
-goblin.attack(10)
-ucup.take_damage(goblin)
-goblin.attack(10)
+sopo.attack(goblin)
+goblin.take_damage(5)
+dontol.attack(goblin)
+goblin.take_damage(5)
+adit.attack(goblin)
+goblin.take_damage(10)
+ucup.attack(goblin)
+goblin.take_damage(10)
 adel.combo(goblin)
 goblin.tercombo(20)
 print(goblin)
@@ -98,11 +98,11 @@ sopo.combo(yinlong)
 ucup.combo(yinlong)
 yinlong.tercombo(20)
 print(yinlong)
-yinlong.take_damage(adit)
-adit.attack(25)
+yinlong.attack(adit)
+adit.take_damage(25)
 print(adit)
-adit.take_damage(yinlong)
-yinlong.attack(10)
+adit.attack(yinlong)
+yinlong.take_damage(10)
 adel.combo(yinlong)
 adit.combo(yinlong)
 sopo.combo(yinlong)
