@@ -8,9 +8,6 @@ class Hero:
 
     def __str__(self):
         return(f"{self.name} | JOB: {self.job} | HP: {self.hp} | TYPE: {self.type}")
-
-    def is_alive(self):
-        return self.hp > 0
     
     def attack(self, enemy):
         print(f"{self.name} Menyerang {enemy.name}")
