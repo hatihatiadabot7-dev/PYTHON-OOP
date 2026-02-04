@@ -45,11 +45,10 @@ class Hero:
         self.hp -= semekdon
         print(f"{self.name} DISEMEKDONN {semekdon}KALII!!!")
         if self.hp <= 0:
-           self.hp = 0
-        print(f"{self.name} MATIII")
-        print("--- PERMAINAN SELESAI ---")
-        print("BOYAAHHHH...")
-        print("======================")
+            print(f"{self.name} MATIII")
+            print("--- PERMAINAN SELESAI ---")
+            print("BOYAAHHHH...")
+            print("======================")
     
     def regen(self, odading):
         self.hp += odading
